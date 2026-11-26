@@ -52,6 +52,16 @@ legend { font-weight: 600; padding: 0; margin-bottom: 12px; }
 .order-row { display: grid; gap: 6px; margin-bottom: 12px; }
 .order-row label { font-weight: 400; }
 .order-row select { width: 100%; }
+input[type="text"] { display: block; width: 100%; min-height: 44px; padding: 10px; margin: 8px 0 14px; border: 1px solid #718096; border-radius: 5px; font: inherit; }
+.exhibits figure { margin: 16px 0; }
+.exhibit-link { display: block; width: fit-content; max-width: 100%; }
+.exhibits img { display: block; max-width: 100%; height: auto; border: 1px solid #c4cedb; }
+figcaption { margin-top: 5px; color: #526174; font-size: .85rem; }
+dialog { max-width: 96vw; max-height: 94vh; padding: 16px; border: 1px solid #718096; border-radius: 8px; overflow: auto; }
+dialog::backdrop { background: #162333bb; }
+dialog button { position: sticky; top: 0; }
+dialog p { margin-top: 12px; }
+#preview-image { display: block; max-width: none; height: auto; }
 .source-note { background: #fff7e6; border-left: 4px solid #9c6800; padding: 12px; }
 .error { color: #a51f29; margin-top: 10px; }
 .error:empty { margin: 0; }
