@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCST Cybersecurity Reviewer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>CCST Cybersecurity Reviewer</h1>
+      <p>Practice at your own pace. Submit an answer to see the reviewer's key and explanation.</p>
+    </header>
+
+    <section id="chapter-picker" class="panel" aria-labelledby="picker-title">
+      <h2 id="picker-title" tabindex="-1">Choose your practice</h2>
+      <p>All 179 source questions are included. Matching questions are split into individual pairings, giving 226 practice items.</p>
+      <form id="start-form">
+        <label for="chapter-select">Chapter</label>
+        <select id="chapter-select" name="chapter"></select>
+        <button type="submit">Start practice</button>
+      </form>
+      <p class="muted">Questions follow source order. Scores follow the reviewer's explicit keys, including its qualifications. Two questions have no valid listed answer and are review only.</p>
+    </section>
+
+    <section id="quiz" hidden aria-labelledby="session-title">
+      <div class="session-heading">
+        <h2 id="session-title"></h2>
+        <div class="actions">
+          <button id="restart" class="secondary" type="button">Restart quiz</button>
+          <button id="change-chapter" class="secondary" type="button">New chapter</button>
+        </div>
+      </div>
+      <div class="panel status-panel">
+        <p id="position"></p>
+        <p id="score"></p>
+        <label id="progress-label" for="review-progress"></label>
+        <progress id="review-progress" value="0" max="1"></progress>
+        <p id="completion" role="status" hidden></p>
+      </div>
+
+      <article class="panel" aria-labelledby="question-title">
+        <p id="source-reference" class="muted"></p>
+        <h3 id="question-title" tabindex="-1"></h3>
+        <p id="pairing-term" hidden></p>
+        <p id="source-note" class="source-note" hidden></p>
+        <form id="answer-form" novalidate>
+          <fieldset id="answer-fieldset">
+            <legend id="answer-instructions"></legend>
+            <div id="answer-options"></div>
+          </fieldset>
+          <p id="validation" class="error" role="alert"></p>
+          <button id="submit-answer" type="submit">Submit answer</button>
+        </form>
+        <section id="feedback" class="feedback" role="region" aria-labelledby="feedback-title" tabindex="-1" hidden>
+          <h4 id="feedback-title"></h4>
+          <p id="answer-key"></p>
+          <ul id="correct-choices"></ul>
+          <h4>Explanation from the reviewer</h4>
+          <p id="explanation"></p>
+        </section>
+      </article>
+
+      <nav class="navigation" aria-label="Question navigation">
+        <button id="previous" class="secondary" type="button">Previous</button>
+        <button id="next" type="button">Next</button>
+      </nav>
+      <p class="muted">You can skip questions and return with Previous. Submitted answers are locked until you restart. Each pairing counts as one practice item.</p>
+    </section>
+
+    <footer>
+      <p>Source: CCST_Cybersecurity_Reviewer_2026_NEW.docx.pdf. Wording, keys, and explanations are retained from the reviewer; layout spacing is normalized.</p>
+      <p>Works offline. Progress stays in this page session; reloading or starting another practice clears it.</p>
+    </footer>
+    <noscript><p class="source-note">Enable JavaScript in your browser to use the reviewer.</p></noscript>
+  </main>
+</body>
+</html>
